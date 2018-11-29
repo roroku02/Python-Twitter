@@ -17,6 +17,6 @@ if res.status_code == 200:
 	print('取得完了')
 tweet_list = json.loads(res.text) 
 for tweet in tweet_list:
-	print(tweet['user']['name'] ,':\n', tweet['text'])
+	print(tweet['user']['name'] ,'(@', tweet['user']['screen_name'] ,') : \n', tweet['text'])
 	print('-*-*-*--*-*-*--*-*-*--*-*-*--*-*-*-')
 	
